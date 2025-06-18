@@ -38,7 +38,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-green-400">
-            &lt;DevPortfolio/&gt;
+            &lt;DevHandels.codes()/&gt;
           </div>
           
           {/* Desktop Menu */}
