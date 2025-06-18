@@ -45,11 +45,11 @@ const Hero = () => {
           
           <div className="hidden lg:block">
             <div className="relative">
-              <div className="w-96 h-96 bg-gradient-to-br from-green-500/30 via-green-400/20 to-green-600/10 rounded-full flex items-center justify-center border border-green-500/30 overflow-hidden shadow-2xl">
+              <div className="w-[450px] h-[450px] bg-gradient-to-br from-green-500/30 via-green-400/20 to-green-600/10 rounded-full flex items-center justify-center border border-green-500/20 overflow-hidden shadow-2xl">
                 <img 
                   src="/lovable-uploads/3b810a4a-0532-4cd6-8b99-33a5f3ea2bbf.png"
                   alt="Handels Gomes"
-                  className="w-80 h-80 rounded-full object-cover border-4 border-green-500/40 shadow-lg"
+                  className="w-[420px] h-[420px] rounded-full object-cover border-2 border-green-500/30 shadow-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-500/20 via-transparent to-green-400/10 rounded-full"></div>
               </div>
