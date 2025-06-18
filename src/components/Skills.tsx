@@ -1,73 +1,58 @@
 
 import React from 'react';
-import { Star, StarHalf } from 'lucide-react';
+import { Code2, Database, Wrench } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend",
+      icon: <Code2 className="w-6 h-6" />,
       skills: [
-        { name: "React", level: 5 },
-        { name: "TypeScript", level: 4 },
-        { name: "Next.js", level: 4 },
-        { name: "Tailwind CSS", level: 5 },
-        { name: "JavaScript", level: 5 }
+        { name: "React", level: 90 },
+        { name: "TypeScript", level: 85 },
+        { name: "Next.js", level: 80 },
+        { name: "Tailwind CSS", level: 95 },
+        { name: "JavaScript", level: 92 }
       ]
     },
     {
       title: "Backend",
+      icon: <Database className="w-6 h-6" />,
       skills: [
-        { name: "Node.js", level: 4 },
-        { name: "Python", level: 4 },
-        { name: "Express.js", level: 4 },
-        { name: "PostgreSQL", level: 3 },
-        { name: "MongoDB", level: 3 }
+        { name: "Node.js", level: 85 },
+        { name: "Python", level: 80 },
+        { name: "Express.js", level: 82 },
+        { name: "PostgreSQL", level: 75 },
+        { name: "MongoDB", level: 78 }
       ]
     },
     {
       title: "Ferramentas",
+      icon: <Wrench className="w-6 h-6" />,
       skills: [
-        { name: "Git", level: 5 },
-        { name: "Docker", level: 3 },
-        { name: "AWS", level: 3 },
-        { name: "Figma", level: 4 },
-        { name: "VS Code", level: 5 }
+        { name: "Git", level: 95 },
+        { name: "Docker", level: 70 },
+        { name: "AWS", level: 72 },
+        { name: "Figma", level: 88 },
+        { name: "VS Code", level: 98 }
       ]
     }
   ];
 
-  const renderStars = (level: number) => {
-    const stars = [];
-    const fullStars = Math.floor(level);
-    const hasHalfStar = level % 1 !== 0;
-    
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <Star key={i} size={16} className="fill-green-400 text-green-400" />
-      );
-    }
-    
-    if (hasHalfStar) {
-      stars.push(
-        <StarHalf key="half" size={16} className="fill-green-400 text-green-400" />
-      );
-    }
-    
-    const emptyStars = 5 - Math.ceil(level);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <Star key={`empty-${i}`} size={16} className="text-gray-600" />
-      );
-    }
-    
-    return stars;
+  const getLevelText = (level: number) => {
+    if (level >= 90) return "Expert";
+    if (level >= 80) return "Avançado";
+    if (level >= 70) return "Intermediário";
+    if (level >= 60) return "Básico";
+    return "Iniciante";
   };
 
-  const getLevelText = (level: number) => {
-    if (level >= 4.5) return "Avançado";
-    if (level >= 3.5) return "Intermediário";
-    if (level >= 2.5) return "Básico";
-    return "Iniciante";
+  const getLevelColor = (level: number) => {
+    if (level >= 90) return "from-green-400 to-green-600";
+    if (level >= 80) return "from-green-500 to-green-700";
+    if (level >= 70) return "from-yellow-400 to-yellow-600";
+    if (level >= 60) return "from-orange-400 to-orange-600";
+    return "from-red-400 to-red-600";
   };
 
   return (
@@ -85,18 +70,34 @@ const Skills = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <div key={category.title} className="bg-black p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-              <h3 className="text-2xl font-bold mb-8 text-green-400 text-center">{category.title}</h3>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="text-green-400">{category.icon}</div>
+                <h3 className="text-2xl font-bold text-green-400">{category.title}</h3>
+              </div>
+              
               <div className="space-y-6">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-2">
+                  <div key={skill.name} className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-white font-medium">{skill.name}</span>
-                      <span className="text-green-400 font-semibold text-sm">
-                        {getLevelText(skill.level)}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400 font-semibold text-sm">
+                          {getLevelText(skill.level)}
+                        </span>
+                        <span className="text-gray-400 text-xs">
+                          {skill.level}%
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-1">
-                      {renderStars(skill.level)}
+                    
+                    <div className="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
+                      <div 
+                        className={`h-full bg-gradient-to-r ${getLevelColor(skill.level)} rounded-full transition-all duration-1000 ease-out`}
+                        style={{ 
+                          width: `${skill.level}%`,
+                          animation: `progressFill 1.5s ease-out forwards`
+                        }}
+                      ></div>
                     </div>
                   </div>
                 ))}
@@ -106,40 +107,33 @@ const Skills = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-4 bg-black p-4 rounded-xl border border-green-500/20">
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 bg-black p-6 rounded-xl border border-green-500/20">
             <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1,2,3,4,5].map(i => (
-                  <Star key={i} size={12} className="fill-green-400 text-green-400" />
-                ))}
-              </div>
-              <span className="text-sm text-gray-400">Avançado</span>
+              <div className="w-4 h-2 bg-gradient-to-r from-green-400 to-green-600 rounded-full"></div>
+              <span className="text-sm text-gray-400">Expert (90%+)</span>
             </div>
-            <div className="w-px h-4 bg-gray-600"></div>
             <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1,2,3,4].map(i => (
-                  <Star key={i} size={12} className="fill-green-400 text-green-400" />
-                ))}
-                <Star size={12} className="text-gray-600" />
-              </div>
-              <span className="text-sm text-gray-400">Intermediário</span>
+              <div className="w-4 h-2 bg-gradient-to-r from-green-500 to-green-700 rounded-full"></div>
+              <span className="text-sm text-gray-400">Avançado (80%+)</span>
             </div>
-            <div className="w-px h-4 bg-gray-600"></div>
             <div className="flex items-center gap-2">
-              <div className="flex">
-                {[1,2,3].map(i => (
-                  <Star key={i} size={12} className="fill-green-400 text-green-400" />
-                ))}
-                {[1,2].map(i => (
-                  <Star key={`empty-${i}`} size={12} className="text-gray-600" />
-                ))}
-              </div>
-              <span className="text-sm text-gray-400">Básico</span>
+              <div className="w-4 h-2 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
+              <span className="text-sm text-gray-400">Intermediário (70%+)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-2 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full"></div>
+              <span className="text-sm text-gray-400">Básico (60%+)</span>
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes progressFill {
+          from { width: 0%; }
+          to { width: var(--target-width); }
+        }
+      `}</style>
     </section>
   );
 };
