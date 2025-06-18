@@ -22,7 +22,7 @@ const translations = {
     // Hero section
     fullStackDeveloper: 'Full Stack Developer',
     heroGreeting: 'Hello, I am',
-    heroName: 'Handels Gomes',
+    heroName: 'Handel Gomes',
     heroDescription: 'Full Stack Developer specialized in creating modern and scalable digital solutions. I transform ideas into functional and impactful applications.',
     viewProjects: 'View Projects',
     getInTouch: 'Get in Touch',
@@ -65,7 +65,7 @@ const translations = {
     // Hero section
     fullStackDeveloper: 'Desenvolvedor Full Stack',
     heroGreeting: 'Olá, eu sou',
-    heroName: 'Handels Gomes',
+    heroName: 'Handel Gomes',
     heroDescription: 'Desenvolvedor Full Stack especializado em criar soluções digitais modernas e escaláveis. Transformo ideias em aplicações funcionais e impactantes.',
     viewProjects: 'Ver Projetos',
     getInTouch: 'Entre em Contato',
