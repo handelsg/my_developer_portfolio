@@ -47,7 +47,7 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-full flex items-center justify-center border border-green-500/20 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="/lovable-uploads/304dc835-c859-4b89-9f5c-d8df4f243895.png"
                   alt="Handels Gomes"
                   className="w-72 h-72 rounded-full object-cover border-4 border-green-500/30"
                 />
