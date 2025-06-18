@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { ArrowDown, Code2 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative">
       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-black"></div>
@@ -12,18 +15,16 @@ const Hero = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/20 mb-6">
               <Code2 className="w-4 h-4 text-green-400" />
-              <span className="text-green-400 text-sm font-medium">Desenvolvedor Full Stack</span>
+              <span className="text-green-400 text-sm font-medium">{t('fullStackDeveloper')}</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Olá, eu sou
-              <span className="text-green-400 block">Seu Nome</span>
+              {t('heroGreeting')}
+              <span className="text-green-400 block">{t('heroName')}</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
-              Desenvolvedor Full Stack especializado em criar soluções digitais 
-              modernas e escaláveis. Transformo ideias em aplicações funcionais 
-              e impactantes.
+              {t('heroDescription')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -31,23 +32,25 @@ const Hero = () => {
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
               >
-                Ver Projetos
+                {t('viewProjects')}
               </button>
               <button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 rounded-lg font-semibold transition-all duration-200"
               >
-                Entre em Contato
+                {t('getInTouch')}
               </button>
             </div>
           </div>
           
           <div className="hidden lg:block">
             <div className="relative">
-              <div className="w-80 h-80 bg-green-500/10 rounded-full flex items-center justify-center border border-green-500/20">
-                <div className="w-60 h-60 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <Code2 className="w-24 h-24 text-green-400" />
-                </div>
+              <div className="w-80 h-80 bg-gradient-to-br from-green-500/20 to-green-600/10 rounded-full flex items-center justify-center border border-green-500/20 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  alt="Handels Gomes"
+                  className="w-72 h-72 rounded-full object-cover border-4 border-green-500/30"
+                />
               </div>
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full animate-pulse delay-75"></div>
