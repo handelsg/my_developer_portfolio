@@ -1,43 +1,46 @@
 
 import React from 'react';
 import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Education = () => {
+  const { t } = useLanguage();
+
   const education = [
     {
       institution: "Universidade Federal de Tecnologia",
-      degree: "Bacharelado em Ciência da Computação",
+      degree: t('computerScienceDegree'),
       period: "2016 - 2020",
       type: "graduation",
-      description: "Formação sólida em fundamentos da computação, algoritmos, estruturas de dados e engenharia de software com foco em aplicações práticas.",
+      description: t('computerScienceDescription'),
       highlights: [
-        "Projeto de conclusão em Machine Learning aplicado",
-        "Monitor de Programação por 2 semestres consecutivos",
-        "Participação em hackathons universitários com premiações"
+        t('computerScienceHighlight1'),
+        t('computerScienceHighlight2'),
+        t('computerScienceHighlight3')
       ]
     },
     {
       institution: "Rocketseat",
-      degree: "Bootcamp GoStack Full Stack",
+      degree: t('nextjsCourseDegree'),
       period: "2021",
       type: "course",
-      description: "Bootcamp intensivo focado em desenvolvimento full-stack com as tecnologias mais modernas e demandadas pelo mercado.",
+      description: t('nextjsCourseDescription'),
       highlights: [
-        "Desenvolvimento de 3 aplicações completas do zero",
-        "Metodologias ágeis, clean code e boas práticas",
-        "Deploy, DevOps e arquitetura de aplicações"
+        t('nextjsCourseHighlight1'),
+        t('nextjsCourseHighlight2'),
+        t('nextjsCourseHighlight3')
       ]
     },
     {
-      institution: "Amazon Web Services",
-      degree: "AWS Solutions Architect Associate",
+      institution: "Google Cloud",
+      degree: t('googleCloudDegree'),
       period: "2022",
       type: "certification",
-      description: "Certificação profissional em arquitetura de soluções na nuvem AWS, cobrindo desde fundamentos até práticas avançadas de cloud.",
+      description: t('googleCloudDescription'),
       highlights: [
-        "Arquitetura de aplicações escaláveis e resilientes",
-        "Serviços de computação, armazenamento e networking",
-        "Segurança, monitoramento e otimização de custos"
+        t('googleCloudHighlight1'),
+        t('googleCloudHighlight2'),
+        t('googleCloudHighlight3')
       ]
     }
   ];
@@ -55,10 +58,10 @@ const Education = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Formação <span className="text-green-400">Acadêmica</span>
+            {t('educationTitle')} <span className="text-green-400">{t('educationHighlight')}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Educação contínua e certificações que fundamentam minha expertise técnica
+            {t('educationSubtitle')}
           </p>
         </div>
 
@@ -84,7 +87,7 @@ const Education = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">{edu.description}</p>
                   
                   <div>
-                    <h4 className="text-lg font-semibold mb-3 text-green-400">Principais Destaques:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-green-400">{t('mainHighlights')}</h4>
                     <ul className="space-y-2">
                       {edu.highlights.map((highlight, idx) => (
                         <li key={idx} className="text-gray-300 flex items-start">

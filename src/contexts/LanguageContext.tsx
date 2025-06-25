@@ -39,6 +39,34 @@ const translations = {
     advanced: 'Advanced',
     expert: 'Expert',
     
+    // Projects section
+    projectsTitle: 'Featured',
+    projectsHighlight: 'Projects',
+    projectsSubtitle: 'Selection of my main projects that demonstrate technical expertise and delivery capacity',
+    viewCode: 'Code',
+    viewDemo: 'Demo',
+    
+    // Education section
+    educationTitle: 'Academic',
+    educationHighlight: 'Background',
+    educationSubtitle: 'Continuous education and certifications that support my technical expertise',
+    mainHighlights: 'Main Highlights:',
+    computerScienceDegree: 'Bachelor in Computer Science',
+    computerScienceDescription: 'Solid foundation in computing fundamentals, algorithms, data structures and software engineering with focus on practical applications.',
+    computerScienceHighlight1: 'Final project in applied Machine Learning',
+    computerScienceHighlight2: 'Programming tutor for 2 consecutive semesters',
+    computerScienceHighlight3: 'Participation in university hackathons with awards',
+    nextjsCourseDegree: 'Complete Next.js Course',
+    nextjsCourseDescription: 'Comprehensive course focused on modern React development with Next.js, covering from fundamentals to advanced concepts and deployment.',
+    nextjsCourseHighlight1: 'Development of 5 complete applications from scratch',
+    nextjsCourseHighlight2: 'Server-side rendering and static generation',
+    nextjsCourseHighlight3: 'Performance optimization and best practices',
+    googleCloudDegree: 'Google Cloud Architect Associate',
+    googleCloudDescription: 'Professional certification in Google Cloud Platform architecture, covering scalable solutions design and cloud infrastructure management.',
+    googleCloudHighlight1: 'Scalable and resilient applications architecture',
+    googleCloudHighlight2: 'Computing, storage and networking services',
+    googleCloudHighlight3: 'Security, monitoring and cost optimization',
+    
     // Contact section
     contactTitle: 'Let\'s Talk?',
     contactSubtitle: 'I\'m always open to new opportunities and challenging projects. Get in touch!',
@@ -81,6 +109,34 @@ const translations = {
     intermediate: 'Intermediário',
     advanced: 'Avançado',
     expert: 'Expert',
+    
+    // Projects section
+    projectsTitle: 'Projetos em',
+    projectsHighlight: 'Destaque',
+    projectsSubtitle: 'Seleção dos meus principais projetos que demonstram experiência técnica e capacidade de entrega',
+    viewCode: 'Código',
+    viewDemo: 'Demo',
+    
+    // Education section
+    educationTitle: 'Formação',
+    educationHighlight: 'Acadêmica',
+    educationSubtitle: 'Educação contínua e certificações que fundamentam minha expertise técnica',
+    mainHighlights: 'Principais Destaques:',
+    computerScienceDegree: 'Bacharelado em Ciência da Computação',
+    computerScienceDescription: 'Formação sólida em fundamentos da computação, algoritmos, estruturas de dados e engenharia de software com foco em aplicações práticas.',
+    computerScienceHighlight1: 'Projeto de conclusão em Machine Learning aplicado',
+    computerScienceHighlight2: 'Monitor de Programação por 2 semestres consecutivos',
+    computerScienceHighlight3: 'Participação em hackathons universitários com premiações',
+    nextjsCourseDegree: 'Curso Completo de Next.js',
+    nextjsCourseDescription: 'Curso abrangente focado em desenvolvimento React moderno com Next.js, cobrindo desde fundamentos até conceitos avançados e deploy.',
+    nextjsCourseHighlight1: 'Desenvolvimento de 5 aplicações completas do zero',
+    nextjsCourseHighlight2: 'Server-side rendering e geração estática',
+    nextjsCourseHighlight3: 'Otimização de performance e boas práticas',
+    googleCloudDegree: 'Google Cloud Architect Associate',
+    googleCloudDescription: 'Certificação profissional em arquitetura Google Cloud Platform, cobrindo design de soluções escaláveis e gerenciamento de infraestrutura em nuvem.',
+    googleCloudHighlight1: 'Arquitetura de aplicações escaláveis e resilientes',
+    googleCloudHighlight2: 'Serviços de computação, armazenamento e networking',
+    googleCloudHighlight3: 'Segurança, monitoramento e otimização de custos',
     
     // Contact section
     contactTitle: 'Vamos Conversar?',

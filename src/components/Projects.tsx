@@ -1,40 +1,43 @@
 
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos integrado e gestão avançada de estoque.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      github: "#",
+      title: "Sistema de Geração de Artefatos Ágeis com IA",
+      description: "Sistema inovador que utiliza IA Generativa para automatizar a criação de artefatos ágeis como resumo de reuniões, geração de user stories e criação de tasks a partir de discussões.",
+      technologies: ["Next.js", "FastAPI", "MongoDB", "IA Generativa", "Python"],
+      github: "https://github.com/handelsg/project-tcc-frontend",
       demo: "#",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
     },
     {
-      title: "Task Management System",
-      description: "Sistema de gerenciamento de tarefas com colaboração em tempo real, notificações push e dashboard de analytics.",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Shadcn/ui"],
-      github: "#",
+      title: "E-commerce Completo ASP.NET MVC",
+      description: "Plataforma completa de e-commerce desenvolvida com ASP.NET MVC, incluindo sistema de pagamentos, gestão de produtos, carrinho de compras e painel administrativo completo.",
+      technologies: ["ASP.NET MVC", "C#", "SQL Server", "Entity Framework", "Bootstrap"],
+      github: "https://github.com/handelsg/ecommerce-completo-aspnet-mvc",
       demo: "#",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
     },
     {
-      title: "Weather Analytics Dashboard",
-      description: "Dashboard meteorológico com previsões detalhadas, mapas interativos e sistema de alertas personalizados.",
-      technologies: ["React", "D3.js", "Express.js", "MongoDB", "Chart.js"],
-      github: "#",
+      title: "API E-commerce RESTful",
+      description: "API robusta para e-commerce com endpoints completos para gestão de produtos, usuários, pedidos e autenticação. Documentação completa com Swagger e arquitetura escalável.",
+      technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "Swagger"],
+      github: "https://github.com/handelsg/ECOMMERCEAPI",
       demo: "#",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
     },
     {
-      title: "Social Media Analytics",
-      description: "Ferramenta profissional de análise de redes sociais com visualização de dados e relatórios automatizados.",
-      technologies: ["Vue.js", "Python", "FastAPI", "Redis", "Docker"],
-      github: "#",
+      title: "Portfolio Pessoal React",
+      description: "Site portfolio moderno e responsivo desenvolvido com React, TypeScript e Tailwind CSS, featuring animações suaves e design system personalizado.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      github: "https://github.com/handelsg",
       demo: "#",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop"
     }
   ];
 
@@ -43,10 +46,10 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Projetos em <span className="text-green-400">Destaque</span>
+            {t('projectsTitle')} <span className="text-green-400">{t('projectsHighlight')}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Seleção dos meus principais projetos que demonstram experiência técnica e capacidade de entrega
+            {t('projectsSubtitle')}
           </p>
         </div>
 
@@ -80,17 +83,19 @@ const Projects = () => {
                 <div className="flex gap-4">
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
                   >
                     <Github size={20} />
-                    <span>Código</span>
+                    <span>{t('viewCode')}</span>
                   </a>
                   <a
                     href={project.demo}
                     className="flex items-center gap-2 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-200"
                   >
                     <ExternalLink size={20} />
-                    <span>Demo</span>
+                    <span>{t('viewDemo')}</span>
                   </a>
                 </div>
               </div>
