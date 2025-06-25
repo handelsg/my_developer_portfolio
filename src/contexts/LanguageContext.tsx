@@ -25,7 +25,7 @@ const translations = {
     heroName: 'Handel Gomes',
     heroDescription: 'Full Stack Developer specialized in creating modern and scalable digital solutions. I transform ideas into functional and impactful applications.',
     professionalSummary: 'Professional Summary',
-    professionalSummaryText: 'Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.',
+    professionalSummaryText: 'Proactive Full Stack developer focused on delivering efficient and well-structured solutions. I seek professional challenges to apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.',
     viewProjects: 'View Projects',
     getInTouch: 'Get in Touch',
     
@@ -182,7 +182,7 @@ const translations = {
     heroName: 'Handel Gomes',
     heroDescription: 'Desenvolvedor Full Stack especializado em criar soluções digitais modernas e escaláveis. Transformo ideias em aplicações funcionais e impactantes.',
     professionalSummary: 'Resumo Profissional',
-    professionalSummaryText: 'Desenvolvedor Fullstack proativo e comprometido em entregar soluções eficientes e bem estruturadas. Busco um desafio profissional onde possa aplicar minha experiência no desenvolvimento de sistemas inovadores, combinando tecnologia e usabilidade para criar aplicações robustas e escaláveis.',
+    professionalSummaryText: 'Desenvolvedor Fullstack proativo focado em entregar soluções eficientes e bem estruturadas. Busco desafios profissionais para aplicar minha experiência no desenvolvimento de sistemas inovadores, combinando tecnologia e usabilidade para criar aplicações robustas e escaláveis.',
     viewProjects: 'Ver Projetos',
     getInTouch: 'Entre em Contato',
     
