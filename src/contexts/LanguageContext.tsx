@@ -24,6 +24,8 @@ const translations = {
     heroGreeting: 'Hello, I am',
     heroName: 'Handel Gomes',
     heroDescription: 'Full Stack Developer specialized in creating modern and scalable digital solutions. I transform ideas into functional and impactful applications.',
+    professionalSummary: 'Professional Summary',
+    professionalSummaryText: 'Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.',
     viewProjects: 'View Projects',
     getInTouch: 'Get in Touch',
     
@@ -33,11 +35,95 @@ const translations = {
     frontend: 'Frontend',
     backend: 'Backend',
     tools: 'Tools',
+    hardSkills: 'Hard Skills',
+    softSkills: 'Soft Skills',
+    interpersonalSkills: 'Interpersonal Skills',
+    languagesSpoken: 'Languages Spoken',
+    communicationLanguages: 'Communication Languages',
+    teamwork: 'Teamwork',
+    agileMethodologies: 'Agile Methodologies (Scrum)',
+    effectiveCommunication: 'Effective Communication',
+    problemSolving: 'Problem Solving',
+    criticalThinking: 'Critical Thinking',
+    continuousLearning: 'Continuous Learning',
+    projectManagement: 'Project Management',
+    codeVersioning: 'Code Versioning',
+    codeReview: 'Code Review',
+    portuguese: 'Portuguese',
+    english: 'English',
+    spanish: 'Spanish',
+    native: 'Native',
     beginner: 'Beginner',
     basic: 'Basic',
     intermediate: 'Intermediate',
     advanced: 'Advanced',
     expert: 'Expert',
+
+    // Awards section
+    awardsTitle: 'Awards and',
+    recognitions: 'Recognitions',
+    awardsSubtitle: 'Recognition received for technical excellence and innovation in global competitions',
+    globalStageSelected: 'Selected for Global Stage',
+    localWinner: 'Local Winner',
+    cloudCertification: 'Cloud Certification',
+    nasaGlobalDescription: 'Selected among thousands of teams worldwide to compete in the global stage of NASA Space Apps Challenge, representing innovative solutions for space challenges.',
+    nasaLocalDescription: 'Winner of the local edition of NASA Space Apps Challenge, developing creative solutions for space exploration and Earth observation challenges.',
+    googleCloudBoostDescription: 'Professional certification in Google Cloud Platform, demonstrating expertise in cloud architecture and scalable solutions.',
+    globalCompetition: 'Global Competition',
+    localCompetition: 'Local Competition',
+    professionalCertification: 'Professional Certification',
+    competitiveSpirit: 'Innovation and competitive spirit driving technological excellence',
+
+    // Experience section
+    experienceTitle: 'Professional',
+    professional: 'Experience',
+    experienceSubtitle: 'Professional trajectory focused on continuous growth and results delivery',
+    present: 'Present',
+    frontendDeveloper: 'Frontend Developer',
+    aiResearcherDeveloper: 'AI Researcher and Developer',
+    fullstackDeveloper: 'Fullstack Developer',
+    publicSecuritySecretary: 'Public Security Secretary of Sergipe State',
+    mainAchievements: 'Main Achievements:',
+    
+    // Banese Frontend
+    baneseFrontendDescription: 'Development of high-performance web applications using Next.js. Working in agile environment, participating in sprint planning, daily meetings and retrospectives.',
+    baneseFrontendAchievement1: 'Development of high-performance web applications using Next.js',
+    baneseFrontendAchievement2: 'Working in agile environment with Scrum methodology',
+    baneseFrontendAchievement3: 'Architectural decisions for scalable and sustainable solutions',
+    baneseFrontendAchievement4: 'Translation of complex financial concepts into intuitive interfaces',
+    baneseFrontendAchievement5: 'Collaboration with stakeholders to align development efforts',
+
+    // Banese LABES
+    baneseLabesDescription: 'In-depth study of neural networks and language models. Practical application of generative AI in an innovative project.',
+    baneseLabesAchievement1: 'In-depth study of neural networks and language models',
+    baneseLabesAchievement2: 'Practical application of generative AI in innovative project',
+    baneseLabesAchievement3: 'Development of dynamic interfaces using React for AI integration',
+    baneseLabesAchievement4: 'Consolidation of practical knowledge in emerging technologies',
+
+    // SSP
+    sspDescription: 'Development and maintenance of systems using .NET, C#, Angular, JavaScript, HTML and CSS. Creation of integrated systems to optimize critical public management processes.',
+    sspAchievement1: 'Development and maintenance of systems using .NET and Angular',
+    sspAchievement2: 'Creation of integrated systems for critical public management processes',
+    sspAchievement3: 'Implementation of new features and performance optimization',
+    sspAchievement4: 'Collaborative work with multidisciplinary teams ensuring quality deliveries',
+
+    // Differentials section
+    differentialsTitle: 'Competitive',
+    competitive: 'Differentials',
+    differentialsSubtitle: 'What makes me unique in the technology market and ready for new challenges',
+    fullstackExpertise: 'Solid Frontend and Backend Experience',
+    fullstackExpertiseDesc: 'Complete domain of the software development cycle, from user interface to server architecture.',
+    technicalTranslation: 'Technical Concept Translation',
+    technicalTranslationDesc: 'Ability to transform complex technical concepts into intuitive and accessible solutions.',
+    globalRecognition: 'Global Technology Recognition',
+    globalRecognitionDesc: 'Proven track record of participation and recognition in global technology challenges.',
+    collaborativeEnvironment: 'Agile and Collaborative Environments',
+    collaborativeEnvironmentDesc: 'Skill to work in agile and collaborative environments, ensuring quality deliveries.',
+    continuousInnovation: 'Continuous Learning and Innovation',
+    continuousInnovationDesc: 'Commitment to continuous learning and technological innovation.',
+    deliveryFocus: 'Results and Quality Focus',
+    deliveryFocusDesc: 'Strong focus on delivering results and maintaining high quality standards.',
+    readyForChallenges: 'Ready for new challenges and innovative projects',
     
     // Projects section
     projectsTitle: 'Featured',
@@ -95,6 +181,8 @@ const translations = {
     heroGreeting: 'Olá, eu sou',
     heroName: 'Handel Gomes',
     heroDescription: 'Desenvolvedor Full Stack especializado em criar soluções digitais modernas e escaláveis. Transformo ideias em aplicações funcionais e impactantes.',
+    professionalSummary: 'Resumo Profissional',
+    professionalSummaryText: 'Desenvolvedor Fullstack proativo e comprometido em entregar soluções eficientes e bem estruturadas. Busco um desafio profissional onde possa aplicar minha experiência no desenvolvimento de sistemas inovadores, combinando tecnologia e usabilidade para criar aplicações robustas e escaláveis.',
     viewProjects: 'Ver Projetos',
     getInTouch: 'Entre em Contato',
     
@@ -104,11 +192,95 @@ const translations = {
     frontend: 'Frontend',
     backend: 'Backend',
     tools: 'Ferramentas',
+    hardSkills: 'Hard Skills',
+    softSkills: 'Soft Skills',
+    interpersonalSkills: 'Habilidades Interpessoais',
+    languagesSpoken: 'Idiomas Falados',
+    communicationLanguages: 'Idiomas de Comunicação',
+    teamwork: 'Trabalho em Equipe',
+    agileMethodologies: 'Metodologias Ágeis (Scrum)',
+    effectiveCommunication: 'Comunicação Eficaz',
+    problemSolving: 'Resolução de Problemas',
+    criticalThinking: 'Pensamento Crítico',
+    continuousLearning: 'Aprendizagem Contínua',
+    projectManagement: 'Gestão de Projetos',
+    codeVersioning: 'Versionamento de Código',
+    codeReview: 'Revisão de Código',
+    portuguese: 'Português',
+    english: 'Inglês',
+    spanish: 'Espanhol',
+    native: 'Nativo',
     beginner: 'Iniciante',
     basic: 'Básico',
     intermediate: 'Intermediário',
     advanced: 'Avançado',
     expert: 'Expert',
+
+    // Awards section
+    awardsTitle: 'Prêmios e',
+    recognitions: 'Reconhecimentos',
+    awardsSubtitle: 'Reconhecimentos recebidos por excelência técnica e inovação em competições globais',
+    globalStageSelected: 'Selecionado para Etapa Global',
+    localWinner: 'Vencedor Local',
+    cloudCertification: 'Certificação Cloud',
+    nasaGlobalDescription: 'Selecionado entre milhares de equipes mundialmente para competir na etapa global do NASA Space Apps Challenge, representando soluções inovadoras para desafios espaciais.',
+    nasaLocalDescription: 'Vencedor da edição local do NASA Space Apps Challenge, desenvolvendo soluções criativas para desafios de exploração espacial e observação da Terra.',
+    googleCloudBoostDescription: 'Certificação profissional em Google Cloud Platform, demonstrando expertise em arquitetura de nuvem e soluções escaláveis.',
+    globalCompetition: 'Competição Global',
+    localCompetition: 'Competição Local',
+    professionalCertification: 'Certificação Profissional',
+    competitiveSpirit: 'Inovação e espírito competitivo impulsionando a excelência tecnológica',
+
+    // Experience section
+    experienceTitle: 'Experiência',
+    professional: 'Profissional',
+    experienceSubtitle: 'Trajetória profissional com foco em crescimento contínuo e entrega de resultados',
+    present: 'Presente',
+    frontendDeveloper: 'Desenvolvedor Frontend',
+    aiResearcherDeveloper: 'Pesquisador e Desenvolvedor em IA',
+    fullstackDeveloper: 'Desenvolvedor Fullstack',
+    publicSecuritySecretary: 'Secretaria de Segurança Pública do Estado de Sergipe',
+    mainAchievements: 'Principais Conquistas:',
+    
+    // Banese Frontend
+    baneseFrontendDescription: 'Desenvolvimento de aplicações web de alta performance utilizando Next.js. Atuação em ambiente ágil, participando de planejamentos de sprint, reuniões diárias e retrospectivas.',
+    baneseFrontendAchievement1: 'Desenvolvimento de aplicações web de alta performance utilizando Next.js',
+    baneseFrontendAchievement2: 'Atuação em ambiente ágil com metodologia Scrum',
+    baneseFrontendAchievement3: 'Tomada de decisões arquiteturais para soluções escaláveis e sustentáveis',
+    baneseFrontendAchievement4: 'Tradução de conceitos financeiros complexos em interfaces intuitivas',
+    baneseFrontendAchievement5: 'Colaboração com stakeholders para alinhar esforços de desenvolvimento',
+
+    // Banese LABES
+    baneseLabesDescription: 'Estudo aprofundado em redes neurais e modelos de linguagem. Aplicação prática de IA generativa em projeto inovador.',
+    baneseLabesAchievement1: 'Estudo aprofundado em redes neurais e modelos de linguagem',
+    baneseLabesAchievement2: 'Aplicação prática de IA generativa em projeto inovador',
+    baneseLabesAchievement3: 'Desenvolvimento de interfaces dinâmicas utilizando React para integração com IA',
+    baneseLabesAchievement4: 'Consolidação de conhecimento prático em tecnologias emergentes',
+
+    // SSP
+    sspDescription: 'Desenvolvimento e manutenção de sistemas utilizando .NET, C#, Angular, JavaScript, HTML e CSS. Criação de sistemas integrados para otimizar processos críticos da gestão pública.',
+    sspAchievement1: 'Desenvolvimento e manutenção de sistemas utilizando .NET e Angular',
+    sspAchievement2: 'Criação de sistemas integrados para processos críticos da gestão pública',
+    sspAchievement3: 'Implementação de novas funcionalidades e otimização de desempenho',
+    sspAchievement4: 'Trabalho colaborativo com equipes multidisciplinares garantindo entregas de qualidade',
+
+    // Differentials section
+    differentialsTitle: 'Diferenciais',
+    competitive: 'Competitivos',
+    differentialsSubtitle: 'O que me torna único no mercado de tecnologia e pronto para novos desafios',
+    fullstackExpertise: 'Experiência Sólida Frontend e Backend',
+    fullstackExpertiseDesc: 'Domínio completo do ciclo de desenvolvimento de software, desde interface de usuário até arquitetura de servidor.',
+    technicalTranslation: 'Tradução de Conceitos Técnicos',
+    technicalTranslationDesc: 'Capacidade de transformar conceitos técnicos complexos em soluções intuitivas e acessíveis.',
+    globalRecognition: 'Reconhecimento Global em Tecnologia',
+    globalRecognitionDesc: 'Histórico comprovado de participação e reconhecimento em desafios globais de tecnologia.',
+    collaborativeEnvironment: 'Ambientes Ágeis e Colaborativos',
+    collaborativeEnvironmentDesc: 'Habilidade para trabalhar em ambientes ágeis e colaborativos, garantindo entregas de qualidade.',
+    continuousInnovation: 'Aprendizado Contínuo e Inovação',
+    continuousInnovationDesc: 'Comprometimento com aprendizado contínuo e inovação tecnológica.',
+    deliveryFocus: 'Foco em Resultados e Qualidade',
+    deliveryFocusDesc: 'Forte foco na entrega de resultados e manutenção de altos padrões de qualidade.',
+    readyForChallenges: 'Pronto para novos desafios e projetos inovadores',
     
     // Projects section
     projectsTitle: 'Projetos em',
@@ -157,7 +329,7 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('pt');
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language;

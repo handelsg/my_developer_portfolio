@@ -1,32 +1,32 @@
 
 import React from 'react';
-import { Code2, Database, Wrench } from 'lucide-react';
+import { Code2, Database, Wrench, Users, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Skills = () => {
   const { t } = useLanguage();
 
-  const skillCategories = [
+  const hardSkillCategories = [
     {
       title: t('frontend'),
       icon: <Code2 className="w-6 h-6" />,
       skills: [
-        { name: "React", level: 4 },
+        { name: "Next.js", level: 5 },
+        { name: "React", level: 5 },
         { name: "TypeScript", level: 4 },
-        { name: "Next.js", level: 3 },
-        { name: "Tailwind CSS", level: 5 },
-        { name: "JavaScript", level: 4 }
+        { name: "JavaScript", level: 5 },
+        { name: "Tailwind CSS", level: 5 }
       ]
     },
     {
       title: t('backend'),
       icon: <Database className="w-6 h-6" />,
       skills: [
-        { name: "Node.js", level: 4 },
-        { name: "Python", level: 3 },
-        { name: "Express.js", level: 4 },
-        { name: "PostgreSQL", level: 3 },
-        { name: "MongoDB", level: 3 }
+        { name: "C#", level: 4 },
+        { name: "ASP.NET", level: 4 },
+        { name: "Python", level: 4 },
+        { name: "Node.js", level: 3 },
+        { name: "SQL", level: 4 }
       ]
     },
     {
@@ -35,11 +35,29 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 5 },
         { name: "Docker", level: 3 },
-        { name: "AWS", level: 3 },
-        { name: "Figma", level: 4 },
-        { name: "VS Code", level: 5 }
+        { name: "Redis", level: 3 },
+        { name: "PWA", level: 4 },
+        { name: "UI/UX Design", level: 4 }
       ]
     }
+  ];
+
+  const softSkills = [
+    t('teamwork'),
+    t('agileMethodologies'),
+    t('effectiveCommunication'),
+    t('problemSolving'),
+    t('criticalThinking'),
+    t('continuousLearning'),
+    t('projectManagement'),
+    t('codeVersioning'),
+    t('codeReview')
+  ];
+
+  const languages = [
+    { name: t('portuguese'), level: t('native'), flag: '🇧🇷' },
+    { name: t('english'), level: t('advanced'), flag: '🇺🇸' },
+    { name: t('spanish'), level: t('intermediate'), flag: '🇪🇸' }
   ];
 
   const getLevelText = (level: number) => {
@@ -77,7 +95,6 @@ const Skills = () => {
           width={size}
           height={size}
         >
-          {/* Background circle */}
           <circle
             cx={size / 2}
             cy={size / 2}
@@ -86,7 +103,6 @@ const Skills = () => {
             strokeWidth={strokeWidth}
             fill="transparent"
           />
-          {/* Progress circle */}
           <circle
             cx={size / 2}
             cy={size / 2}
@@ -103,7 +119,6 @@ const Skills = () => {
             }}
           />
         </svg>
-        {/* Level number */}
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-lg font-bold text-white">{level}</span>
         </div>
@@ -123,34 +138,79 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category) => (
-            <div key={category.title} className="bg-black p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="text-green-400">{category.icon}</div>
-                <h3 className="text-2xl font-bold text-green-400">{category.title}</h3>
-              </div>
-              
-              <div className="space-y-8">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-6">
-                    <CircularProgress level={skill.level} size={60} />
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white font-medium text-lg">{skill.name}</span>
+        {/* Hard Skills */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-green-400">{t('hardSkills')}</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {hardSkillCategories.map((category) => (
+              <div key={category.title} className="bg-black p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="text-green-400">{category.icon}</div>
+                  <h4 className="text-2xl font-bold text-green-400">{category.title}</h4>
+                </div>
+                
+                <div className="space-y-8">
+                  {category.skills.map((skill) => (
+                    <div key={skill.name} className="flex items-center gap-6">
+                      <CircularProgress level={skill.level} size={60} />
+                      <div className="flex-1">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-white font-medium text-lg">{skill.name}</span>
+                        </div>
+                        <span className="text-green-400 font-semibold text-sm">
+                          {getLevelText(skill.level)}
+                        </span>
                       </div>
-                      <span className="text-green-400 font-semibold text-sm">
-                        {getLevelText(skill.level)}
-                      </span>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* Soft Skills */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-green-400">{t('softSkills')}</h3>
+          <div className="bg-black p-8 rounded-2xl border border-green-500/20">
+            <div className="flex items-center gap-3 mb-6">
+              <Users className="w-6 h-6 text-green-400" />
+              <h4 className="text-xl font-bold text-green-400">{t('interpersonalSkills')}</h4>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {softSkills.map((skill, index) => (
+                <div key={index} className="flex items-center gap-3 p-3 bg-gray-900 rounded-lg border border-green-500/10">
+                  <span className="text-green-400">▸</span>
+                  <span className="text-gray-300">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Languages */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-green-400">{t('languagesSpoken')}</h3>
+          <div className="bg-black p-8 rounded-2xl border border-green-500/20">
+            <div className="flex items-center gap-3 mb-6">
+              <Globe className="w-6 h-6 text-green-400" />
+              <h4 className="text-xl font-bold text-green-400">{t('communicationLanguages')}</h4>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {languages.map((lang, index) => (
+                <div key={index} className="flex items-center gap-4 p-4 bg-gray-900 rounded-lg border border-green-500/10">
+                  <span className="text-3xl">{lang.flag}</span>
+                  <div>
+                    <p className="text-white font-semibold">{lang.name}</p>
+                    <p className="text-green-400 text-sm">{lang.level}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
           <div className="inline-flex flex-wrap items-center justify-center gap-6 bg-black p-6 rounded-xl border border-green-500/20">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-green-500 rounded-full"></div>

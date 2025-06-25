@@ -1,43 +1,53 @@
 
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Experience = () => {
+  const { t } = useLanguage();
+
   const experiences = [
     {
-      company: "TechCorp Solutions",
-      position: "Desenvolvedor Full Stack Sênior",
-      period: "2022 - Presente",
-      description: "Liderança técnica no desenvolvimento de aplicações web escaláveis, mentoria de desenvolvedores júnior e definição de arquiteturas de sistemas.",
-      technologies: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"],
+      company: "Banese",
+      position: t('frontendDeveloper'),
+      period: "Jul 2024 - " + t('present'),
+      location: "Sergipe, Brasil",
+      description: t('baneseFrontendDescription'),
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Scrum"],
       achievements: [
-        "Reduziu tempo de carregamento das aplicações em 40%",
-        "Implementou arquitetura de microserviços robusta",
-        "Mentoria de 3 desenvolvedores júnior com crescimento comprovado"
+        t('baneseFrontendAchievement1'),
+        t('baneseFrontendAchievement2'),
+        t('baneseFrontendAchievement3'),
+        t('baneseFrontendAchievement4'),
+        t('baneseFrontendAchievement5')
       ]
     },
     {
-      company: "StartupXYZ",
-      position: "Desenvolvedor Frontend",
-      period: "2020 - 2022",
-      description: "Desenvolvimento de interfaces modernas e responsivas, integração de APIs RESTful e colaboração ativa no processo de UX/UI design.",
-      technologies: ["Vue.js", "JavaScript", "SASS", "Firebase", "Figma"],
+      company: "Banese LABES",
+      position: t('aiResearcherDeveloper'),
+      period: "Jan 2024 - Jul 2024",
+      location: "Sergipe, Brasil",
+      description: t('baneseLabesDescription'),
+      technologies: ["Python", "React", "Neural Networks", "Generative AI", "Machine Learning"],
       achievements: [
-        "Aumentou taxa de conversão em 25% através de otimizações UX",
-        "Implementou sistema de design consistente em toda aplicação",
-        "Otimizou performance para dispositivos móveis"
+        t('baneseLabesAchievement1'),
+        t('baneseLabesAchievement2'),
+        t('baneseLabesAchievement3'),
+        t('baneseLabesAchievement4')
       ]
     },
     {
-      company: "WebAgency Pro",
-      position: "Desenvolvedor Frontend Júnior",
-      period: "2019 - 2020",
-      description: "Início da carreira profissional com foco em desenvolvimento web, aprendizado das melhores práticas e entrega de projetos para diversos clientes.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "jQuery", "WordPress"],
+      company: t('publicSecuritySecretary'),
+      position: t('fullstackDeveloper'),
+      period: "Jan 2023 - Dez 2024",
+      location: "Sergipe, Brasil",
+      description: t('sspDescription'),
+      technologies: [".NET", "C#", "Angular", "JavaScript", "HTML", "CSS", "SQL Server"],
       achievements: [
-        "Entregou mais de 15 projetos para clientes diversos",
-        "Dominou fundamentos de SEO e acessibilidade web",
-        "Contribuiu ativamente para melhoria de processos internos"
+        t('sspAchievement1'),
+        t('sspAchievement2'),
+        t('sspAchievement3'),
+        t('sspAchievement4')
       ]
     }
   ];
@@ -47,22 +57,24 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Experiência <span className="text-green-400">Profissional</span>
+            {t('experienceTitle')} <span className="text-green-400">{t('professional')}</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Trajetória profissional com foco em crescimento contínuo e entrega de resultados
+            {t('experienceSubtitle')}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div key={exp.company} className="bg-black p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
+              <div key={exp.company + exp.period} className="bg-black p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
                       <Calendar className="w-5 h-5 text-green-400" />
                       <span className="text-green-400 font-semibold">{exp.period}</span>
+                      <MapPin className="w-4 h-4 text-gray-400 ml-4" />
+                      <span className="text-gray-400 text-sm">{exp.location}</span>
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-2">{exp.position}</h3>
@@ -70,7 +82,7 @@ const Experience = () => {
                     <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
                     
                     <div className="mb-6">
-                      <h4 className="text-lg font-semibold mb-3 text-green-400">Principais Conquistas:</h4>
+                      <h4 className="text-lg font-semibold mb-3 text-green-400">{t('mainAchievements')}</h4>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, idx) => (
                           <li key={idx} className="text-gray-300 flex items-start">
