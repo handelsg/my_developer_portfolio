@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      .circuit-path {
+        fill: none;
+        stroke: #00D084;
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .circuit-node {
+        fill: #00D084;
+        stroke: none;
+      }
+      .circuit-connector {
+        fill: none;
+        stroke: #00D084;
+        stroke-width: 6;
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  
+  <!-- Letter H made with circuit board patterns -->
+  <!-- Left vertical line -->
+  <path class="circuit-path" d="M40 40 L40 90 L40 160"/>
+  
+  <!-- Right vertical line -->
+  <path class="circuit-path" d="M160 40 L160 90 L160 160"/>
+  
+  <!-- Horizontal connecting line -->
+  <path class="circuit-path" d="M40 100 L80 100 L120 100 L160 100"/>
+  
+  <!-- Circuit nodes -->
+  <circle class="circuit-node" cx="40" cy="40" r="6"/>
+  <circle class="circuit-node" cx="40" cy="90" r="4"/>
+  <circle class="circuit-node" cx="40" cy="160" r="6"/>
+  <circle class="circuit-node" cx="160" cy="40" r="6"/>
+  <circle class="circuit-node" cx="160" cy="90" r="4"/>
+  <circle class="circuit-node" cx="160" cy="160" r="6"/>
+  <circle class="circuit-node" cx="80" cy="100" r="4"/>
+  <circle class="circuit-node" cx="120" cy="100" r="4"/>
+  
+  <!-- Additional circuit details -->
+  <path class="circuit-connector" d="M40 70 L50 70 L60 80 L60 90"/>
+  <path class="circuit-connector" d="M160 70 L150 70 L140 80 L140 90"/>
+  <path class="circuit-connector" d="M40 130 L50 130 L60 120 L60 110"/>
+  <path class="circuit-connector" d="M160 130 L150 130 L140 120 L140 110"/>
+  
+  <!-- Corner connectors -->
+  <circle class="circuit-node" cx="60" cy="90" r="3"/>
+  <circle class="circuit-node" cx="140" cy="90" r="3"/>
+  <circle class="circuit-node" cx="60" cy="110" r="3"/>
+  <circle class="circuit-node" cx="140" cy="110" r="3"/>
+</svg>

@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="relative animate-scale-in">
               <div className="w-[400px] h-[400px] bg-gradient-to-br from-green-500/30 via-green-400/20 to-green-600/10 rounded-2xl flex items-center justify-center border border-green-500/20 overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/ec253a73-1b39-42d6-a0c4-63f42425b8ff.png"
+                  src="/uploads/ec253a73-1b39-42d6-a0c4-63f42425b8ff.png"
                   alt="Handel Gomes - TCC Presentation"
                   className="w-[380px] h-[380px] rounded-2xl object-cover border-2 border-green-500/30 shadow-lg"
                 />
