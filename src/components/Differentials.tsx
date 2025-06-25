@@ -1,10 +1,29 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Lightbulb, Rocket, Users, TrendingUp, Code, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Differentials = () => {
   const { t } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
+    elements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const differentials = [
     {
@@ -46,9 +65,9 @@ const Differentials = () => {
   ];
 
   return (
-    <section id="differentials" className="py-20 bg-black">
+    <section ref={sectionRef} id="differentials" className="py-20 bg-black">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll opacity-0">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {t('differentialsTitle')} <span className="text-green-400">{t('competitive')}</span>
           </h2>
@@ -59,7 +78,7 @@ const Differentials = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {differentials.map((differential, index) => (
-            <div key={differential.title} className="group relative">
+            <div key={differential.title} className="group relative animate-on-scroll opacity-0" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="bg-gray-900 p-8 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 h-full hover:transform hover:scale-105">
                 <div className="text-center mb-6">
                   <div className={`w-20 h-20 mx-auto rounded-full bg-gradient-to-r ${differential.color} flex items-center justify-center text-white mb-4 group-hover:animate-pulse`}>
@@ -76,7 +95,7 @@ const Differentials = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center animate-on-scroll opacity-0">
           <div className="inline-block bg-gradient-to-r from-green-500 to-green-400 p-[2px] rounded-xl">
             <div className="bg-black px-8 py-4 rounded-xl">
               <p className="text-green-400 font-semibold text-lg">

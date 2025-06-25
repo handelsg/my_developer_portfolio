@@ -12,7 +12,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 items-center gap-12">
-          <div>
+          <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/20 mb-6">
               <Code2 className="w-4 h-4 text-green-400" />
               <span className="text-green-400 text-sm font-medium">{t('fullStackDeveloper')}</span>
@@ -24,13 +24,13 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
-              {t('heroDescription')}
+              Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.
             </p>
 
             <div className="bg-gray-900/80 p-6 rounded-xl border border-green-500/20 mb-8">
-              <h3 className="text-lg font-semibold text-green-400 mb-3">{t('professionalSummary')}</h3>
+              <h3 className="text-lg font-semibold text-green-400 mb-3">Professional Summary</h3>
               <p className="text-gray-300 leading-relaxed text-sm">
-                {t('professionalSummaryText')}
+                Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.
               </p>
             </div>
             
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
           
           <div className="hidden lg:block">
-            <div className="relative">
+            <div className="relative animate-scale-in">
               <div className="w-[400px] h-[400px] bg-gradient-to-br from-green-500/30 via-green-400/20 to-green-600/10 rounded-2xl flex items-center justify-center border border-green-500/20 overflow-hidden shadow-2xl">
                 <img 
                   src="/lovable-uploads/ec253a73-1b39-42d6-a0c4-63f42425b8ff.png"
