@@ -27,6 +27,6 @@ This is a modern and responsive personal portfolio website built with **React** 
 Clone the project and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
-cd your-portfolio
+git clone https://github.com/handelsg/my_developer_portfolio.git
+cd my_developer_portfolio
 npm install
