@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowDown, Code2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -22,6 +21,13 @@ const Hero = () => {
               {t('heroGreeting')}
               <span className="text-green-400 block">{t('heroName')}</span>
             </h1>
+
+            <div className="bg-gray-900/80 p-6 rounded-xl border border-green-500/20 mb-8">
+              <h3 className="text-lg font-semibold text-green-400 mb-3">RESUMO PROFISSIONAL</h3>
+              <p className="text-gray-300 leading-relaxed text-sm">
+                Sou um desenvolvedor Fullstack, proativo e comprometido em entregar soluções eficientes e bem estruturadas. Busco um desafio profissional onde possa aplicar minha experiência no desenvolvimento de sistemas inovadores, combinando tecnologia e usabilidade para criar aplicações robustas e escaláveis. Tenho um histórico sólido na entrega de software de alta qualidade, trabalhando de forma colaborativa com equipes multidisciplinares em ambientes ágeis. Com domínio de linguagens de programação, frameworks e ferramentas modernas, estou sempre aprimorando a performance dos sistemas e a experiência do usuário, acompanhando de perto as tendências e avanços do setor.
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button
