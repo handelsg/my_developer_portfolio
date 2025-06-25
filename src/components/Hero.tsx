@@ -23,17 +23,6 @@ const Hero = () => {
               <span className="text-green-400 block">{t('heroName')}</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
-              Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.
-            </p>
-
-            <div className="bg-gray-900/80 p-6 rounded-xl border border-green-500/20 mb-8">
-              <h3 className="text-lg font-semibold text-green-400 mb-3">Professional Summary</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
-                Proactive and committed Full Stack developer in delivering efficient and well-structured solutions. I seek a professional challenge where I can apply my experience in developing innovative systems, combining technology and usability to create robust and scalable applications.
-              </p>
-            </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
