@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GitBranch, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
@@ -8,32 +8,32 @@ const Projects = () => {
 
   const projects = [
     {
-      title: t('project1Title'),
-      description: t('project1Description'),
+      title: "Sistema de Geração de Artefatos Ágeis com IA",
+      description: "Sistema inovador que utiliza IA Generativa para automatizar a criação de artefatos ágeis como resumo de reuniões, geração de user stories e criação de tasks a partir de discussões.",
       technologies: ["Next.js", "FastAPI", "MongoDB", "IA Generativa", "Python"],
       github: "https://github.com/handelsg/project-tcc-frontend",
       demo: "#",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
     },
     {
-      title: t('project2Title'),
-      description: t('project2Description'),
+      title: "E-commerce Completo ASP.NET MVC",
+      description: "Plataforma completa de e-commerce desenvolvida com ASP.NET MVC, incluindo sistema de pagamentos, gestão de produtos, carrinho de compras e painel administrativo completo.",
       technologies: ["ASP.NET MVC", "C#", "SQL Server", "Entity Framework", "Bootstrap"],
       github: "https://github.com/handelsg/ecommerce-completo-aspnet-mvc",
       demo: "#",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
     },
     {
-      title: t('project3Title'),
-      description: t('project3Description'),
+      title: "API E-commerce RESTful",
+      description: "API robusta para e-commerce com endpoints completos para gestão de produtos, usuários, pedidos e autenticação. Documentação completa com Swagger e arquitetura escalável.",
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "Swagger"],
       github: "https://github.com/handelsg/ECOMMERCEAPI",
       demo: "#",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
     },
     {
-      title: t('project4Title'),
-      description: t('project4Description'),
+      title: "Portfolio Pessoal React",
+      description: "Site portfolio moderno e responsivo desenvolvido com React, TypeScript e Tailwind CSS, featuring animações suaves e design system personalizado.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
       github: "https://github.com/handelsg",
       demo: "#",
@@ -87,7 +87,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105"
                   >
-                    <GitBranch size={20} />
+                    <Github size={20} />
                     <span>{t('viewCode')}</span>
                   </a>
                   <a

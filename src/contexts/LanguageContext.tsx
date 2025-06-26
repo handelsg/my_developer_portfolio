@@ -132,19 +132,6 @@ const translations = {
     viewCode: 'Code',
     viewDemo: 'Demo',
     
-    // Individual projects
-    project1Title: 'AI-Powered Agile Artifacts Generation System',
-    project1Description: 'Innovative system that uses Generative AI to automate the creation of agile artifacts such as meeting summaries, user story generation, and task creation from discussions.',
-    
-    project2Title: 'Complete E-commerce ASP.NET MVC',
-    project2Description: 'Complete e-commerce platform developed with ASP.NET MVC, including payment system, product management, shopping cart, and complete administrative panel.',
-    
-    project3Title: 'RESTful E-commerce API',
-    project3Description: 'Robust e-commerce API with complete endpoints for product, user, order management and authentication. Complete documentation with Swagger and scalable architecture.',
-    
-    project4Title: 'Personal Portfolio React',
-    project4Description: 'Modern and responsive portfolio website developed with React, TypeScript and Tailwind CSS, featuring smooth animations and custom design system.',
-    
     // Education section
     educationTitle: 'Academic',
     educationHighlight: 'Background',
@@ -175,28 +162,13 @@ const translations = {
     downloadCV: 'Download CV',
     downloadCVDescription: 'Download my complete resume in PDF with details about experience, projects and technical qualifications.',
     downloadFullCV: 'Download Full CV (PDF)',
-    downloadCVEnglish: 'Download CV (English)',
-    downloadCVPortuguese: 'Download CV (Portuguese)',
-    chooseLanguage: 'Choose Language:',
-    
-    // Contact form
-    contactForm: 'Send Message',
-    contactFormDescription: 'Send me a direct message and I\'ll respond as soon as possible!',
-    nameField: 'Full Name',
-    emailField: 'Email',
-    companyField: 'Company (Optional)',
-    messageField: 'Message',
-    sendButton: 'Send Message',
-    sendingButton: 'Sending...',
-    messageSent: 'Message sent successfully!',
-    messageError: 'Error sending message. Please try again.',
-    requiredField: 'This field is required',
     currentStatus: 'Current Status',
     availableForOpportunities: 'Available for new opportunities',
     interestedInPositions: 'Interested in Full Stack positions and challenging projects',
-    developedWith: 'Developed with ☕ using React, TypeScript and Tailwind CSS',
+    developedWith: 'Developed with ❤️ using React, TypeScript and Tailwind CSS',
   },
   pt: {
+    // Header
     home: 'Início',
     skills: 'Habilidades',
     projects: 'Projetos',
@@ -317,19 +289,6 @@ const translations = {
     viewCode: 'Código',
     viewDemo: 'Demo',
     
-    // Individual projects
-    project1Title: 'Sistema de Geração de Artefatos Ágeis com IA',
-    project1Description: 'Sistema inovador que utiliza IA Generativa para automatizar a criação de artefatos ágeis como resumo de reuniões, geração de user stories e criação de tasks a partir de discussões.',
-    
-    project2Title: 'E-commerce Completo ASP.NET MVC',
-    project2Description: 'Plataforma completa de e-commerce desenvolvida com ASP.NET MVC, incluindo sistema de pagamentos, gestão de produtos, carrinho de compras e painel administrativo completo.',
-    
-    project3Title: 'API E-commerce RESTful',
-    project3Description: 'API robusta para e-commerce com endpoints completos para gestão de produtos, usuários, pedidos e autenticação. Documentação completa com Swagger e arquitetura escalável.',
-    
-    project4Title: 'Portfolio Pessoal React',
-    project4Description: 'Site portfolio moderno e responsivo desenvolvido com React, TypeScript e Tailwind CSS, featuring animações suaves e design system personalizado.',
-    
     // Education section
     educationTitle: 'Formação',
     educationHighlight: 'Acadêmica',
@@ -360,26 +319,10 @@ const translations = {
     downloadCV: 'Download CV',
     downloadCVDescription: 'Baixe meu currículo completo em PDF com detalhes sobre experiência, projetos e qualificações técnicas.',
     downloadFullCV: 'Baixar CV Completo (PDF)',
-    downloadCVEnglish: 'Baixar CV (Inglês)',
-    downloadCVPortuguese: 'Baixar CV (Português)',
-    chooseLanguage: 'Escolha o Idioma:',
-    
-    // Contact form
-    contactForm: 'Enviar Mensagem',
-    contactFormDescription: 'Envie-me uma mensagem direta e respondo o mais rápido possível!',
-    nameField: 'Nome Completo',
-    emailField: 'E-mail',
-    companyField: 'Empresa (Opcional)',
-    messageField: 'Mensagem',
-    sendButton: 'Enviar Mensagem',
-    sendingButton: 'Enviando...',
-    messageSent: 'Mensagem enviada com sucesso!',
-    messageError: 'Erro ao enviar mensagem. Tente novamente.',
-    requiredField: 'Este campo é obrigatório',
     currentStatus: 'Status Atual',
     availableForOpportunities: 'Disponível para novas oportunidades',
     interestedInPositions: 'Interessado em posições Full Stack e projetos desafiadores',
-    developedWith: 'Desenvolvido com ☕ usando React, TypeScript e Tailwind CSS',
+    developedWith: 'Desenvolvido com ❤️ usando React, TypeScript e Tailwind CSS',
   }
 };
 
@@ -401,8 +344,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   const t = (key: string): string => {
-    const languageTranslations = translations[language];
-    return (languageTranslations as any)[key] || key;
+    return translations[language][key as keyof typeof translations[typeof language]] || key;
   };
 
   return (

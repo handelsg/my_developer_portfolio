@@ -10,7 +10,7 @@ const Education = () => {
     {
       institution: "Universidade Federal de Tecnologia",
       degree: t('computerScienceDegree'),
-      period: "2021 - 2025",
+      period: "2016 - 2020",
       type: "graduation",
       description: t('computerScienceDescription'),
       highlights: [
