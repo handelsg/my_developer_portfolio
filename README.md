@@ -1,4 +1,44 @@
-# Welcome to your Lovable project
+# Modern Coder Resume - Handel Gomes
+
+Portfólio profissional moderno desenvolvido com React, TypeScript e Tailwind CSS.
+
+## 🚀 Deploy GitHub Pages
+
+### Configuração Automática
+Este projeto está configurado para deploy automático no GitHub Pages através de GitHub Actions.
+
+### Manual Deploy
+1. Build do projeto:
+```bash
+npm run build:pages
+```
+
+2. Os arquivos gerados estarão na pasta `dist/`
+
+### Acesso
+- **URL**: https://handelsg.github.io/modern-coder-resume/
+
+## 🛠️ Desenvolvimento Local
+
+### Pré-requisitos
+- Node.js 18+
+- npm ou bun
+
+### Instalação
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+```
+
+## 📋 Scripts Disponíveis
+- `npm run dev` - Servidor de desenvolvimento
+- `npm run build` - Build para produção
+- `npm run build:pages` - Build específico para GitHub Pages
+- `npm run preview` - Preview da build
+- `npm run lint` - Verificar código
 
 ## Project info
 
