@@ -20,7 +20,8 @@ This is a modern and responsive personal portfolio website built with **React** 
 
 ## 📸 Preview
 
-![Portfolio Preview](./preview.png) <!-- Replace with your actual screenshot path -->
+
+![Portfolio Preview](![Captura de tela 2025-06-25 205931](https://github.com/user-attachments/assets/62f63dd4-34d3-450b-a5a9-6c8d4edc06c3)) <!-- Replace with your actual screenshot path -->
 
 ## 🛠️ Getting Started
 
