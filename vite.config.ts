@@ -4,12 +4,13 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: '/modern-coder-resume/',
-  server: {
-    host: "::",
-    port: 8080,
-  },
+export default defineConfig(({ mode, command }) => {
+  return {
+    base: '/modern-coder-resume/', // Fixed base path for GitHub Pages
+    server: {
+      host: "::",
+      port: 8080,
+    },
   plugins: [
     react(),
     mode === 'development' &&
@@ -20,4 +21,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+  };
+});
