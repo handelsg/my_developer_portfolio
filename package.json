@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node fix-assets-paths.js",
     "build:dev": "vite build --mode development",
-    "build:pages": "vite build && node -e \"const fs=require('fs'); let html=fs.readFileSync('dist/index.html','utf8'); html=html.replace(/\\/assets\\//g,'/modern-coder-resume/assets/').replace(/\\/favicon/g,'/modern-coder-resume/favicon'); fs.writeFileSync('dist/index.html',html);\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
